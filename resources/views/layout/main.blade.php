@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap)'}}" rel="stylesheet">
-    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap)'}}" rel="stylesheet">
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap')}}" rel="stylesheet">
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap')}}" rel="stylesheet">
 
     <link rel="{{asset('stylesheet" href="css/open-iconic-bootstrap.min.css')}}">
     <link rel="{{asset('stylesheet" href="css/animate.css')}}">
@@ -130,11 +130,11 @@ to {transform: scale(1)}
 
 	      <div class="collapse navbar-collapse" id="ftco-nav" >
 	        <ul class="navbar-nav ">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link">الرئيسية</a></li>
-            <li class="nav-item"><a href="menu.html" class="nav-link">القائمة</a></li>
-            <li class="nav-item "><a href="about.html" class="nav-link">معلومات عنّا</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">تواصل معنا</a></li>
-            <li class="nav-item cta"><a href="reservation.html" class="nav-link">حجز طاولة</a></li>
+	        	<li class="nav-item active"><a href="/" class="nav-link">الرئيسية</a></li>
+            <li class="nav-item"><a href="/menu" class="nav-link">القائمة</a></li>
+            <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
+	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
+            <li class="nav-item cta"><a href="/reservation" class="nav-link">حجز طاولة</a></li>
           </ul>
           <ul class="navbar-nav mr-auto">
             <li id="signup"   class=" nav-item "  onclick="document.getElementById('modal-wrapper').style.display='block'" ><a  class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 nav-link" >Sign Up</a></li>
