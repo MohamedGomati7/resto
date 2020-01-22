@@ -5,28 +5,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap)'}}" rel="stylesheet">
+    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap)'}}" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="{{asset('stylesheet" href="css/open-iconic-bootstrap.min.css')}}">
+    <link rel="{{asset('stylesheet" href="css/animate.css')}}">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="{{asset('stylesheet" href="css/owl.carousel.min.css')}}">
+    <link rel="{{asset('" href="css/owl.theme.default.min.css')}}">
+    <link rel="{{asset('stylesheet" href="css/magnific-popup.css')}}">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="{{asset('stylesheet" href="css/aos.css')}}">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="{{asset('stylesheet" href="css/ionicons.min.css')}}">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="{{asset('stylesheet" href="css/bootstrap-datepicker.css')}}">
+    <link rel="{{asset('stylesheet" href="css/jquery.timepicker.css')}}">
 
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/sign.css">
+    <link rel="{{asset('stylesheet" href="css/flaticon.css')}}">
+    <link rel="{{asset('stylesheet" href="css/icomoon.css')}}">
+    <link rel="{{asset('stylesheet" href="css/style.css')}}">
+    <link rel="{{asset('stylesheet" href="css/sign.css')}}">
 
 
     <style>
@@ -177,107 +177,14 @@ to {transform: scale(1)}
 	    </div>
 	  </nav>
     <!-- END nav -->
-    
-    <section class="home-slider owl-carousel js-fullheight">
-      <div class="slider-item js-fullheight" style="background-image: url(images/bg_1.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
-            <div class="col-md-12 col-sm-12 text-center ftco-animate mt-5">
-            	<span class="subheading">Order System</span>
-              <h1 class="mb-5">نظام الطلب الخاص بالمطاعم</h1>
-            </br>
-              
-            </div>
-       </div>
-        </div>
-      </div>
 
-      <div class="slider-item js-fullheight" style="background-image: url(images/bg_2.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
+    @yield('content')
 
-            <div class="col-md-12 col-sm-12 text-center ftco-animate mt-5">
-            	<span class="subheading">احجز طلبيتك</span>
-              <h1 class="mb-5"> وأنت في مكانك  </h1>
-            </br>
-              
-            </div>
 
-          </div>
-        </div>
-      </div>
 
-      <div class="slider-item js-fullheight" style="background-image: url(images/bg_3.jpg);">
-      	<div class="overlay"></div>
-        <div class="container">
-          <div class="row slider-text js-fullheight justify-content-center align-items-center" data-scrollax-parent="true">
 
-            <div class="col-md-12 col-sm-12 text-center ftco-animate mt-5">
-            	<span class="subheading">احجز طاولة</span>
-              <h1 class="mb-5"> من حوشك</h1>
-            </br>
-            
-            </div>
-
-          </div>
-        </div>
-    
-      </div>
-    </section>
-
-    
-		
-		<section class="ftco-section bg-light">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-12 text-center heading-section ftco-animate">
-            <span class="subheading mb-5">خدماتنا</span>
-          
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate text-center">
-            <div class="media block-6 services d-block">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-meeting"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">حجز طاولة</h3>
-                <p>امكانية حجز طاولة، حتى تصل الى المطعم وتجدها في انتظارك، دون اي انتظار.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate text-center">
-            <div class="media block-6 services d-block">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-tray"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">طلب الطعام</h3>
-                <p>لا ادعي للإنتظار مجدداً في طوابير طويلة حتى تحصل على طعامك، يمكنك الآن طلب وجبتك المفضلة من خلال تطبيقنا .</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-4 d-flex align-self-stretch ftco-animate text-center">
-            <div class="media block-6 services d-block">
-              <div class="icon d-flex justify-content-center align-items-center">
-                <span class="flaticon-meeting"></span>
-              </div>
-              <div class="media-body p-2 mt-3">
-                <h3 class="heading">منيو رقمية</h3>
-                <p>اطلب طعامك انت وعائلتك أو اصدقائك داخل طاولات المطعم بمنيو رقمية سهلة الاستخدام!.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
-    </section>
-
-    
-		
+    	
     <footer class="ftco-footer ftco-bg-dark" dir="rtl">
       <div class="container" dir="rtl">
         <div class="row" dir="rtl">
@@ -310,23 +217,23 @@ to {transform: scale(1)}
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="{{asset('js/jquery.min.js')}}"></script>
+  <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
+  <script src="{{asset('js/popper.min.js')}}"></script>
+  <script src="{{asset('js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('js/jquery.easing.1.3.js')}}"></script>
+  <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
+  <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
+  <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+  <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+  <script src="{{asset('js/aos.js')}}"></script>
+  <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
+  <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
+  <script src="{{asset('js/jquery.timepicker.min.js')}}"></script>
+  <script src="{{asset('js/scrollax.min.js')}}"></script>
+  <script src="{{asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')}}"></script>
+  <script src="{{asset('js/google-map.js')}}"></script>
+  <script src="{{asset('js/main.js')}}"></script>
     
   </body>
 </html>
