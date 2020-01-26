@@ -72,7 +72,8 @@
                                                     </div>
                                                     <p>{{$meal->details}}
                                                     </p> <br>
-                                                        @auth
+                                                        
+                                                             
                                                     <form class="float-right">
                                                         <div class="input-group input-number-group">
                                                             <div class="input-group-button">
@@ -85,16 +86,16 @@
                                                             </div>
                                                             <br><br>
                                                             <div> <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info mr-3">Edit Meal</a></div>
-                                                            <form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
+                                                            </form><form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
                                                                 @csrf
                                                                 @method('DELETE')
-                                    
-                                                                <input type="submit" value="Delete" class="btn btn-danger">
+                                
+                                                                <input type="submit" value="Delete" class="btn btn-danger" >
                                                             </form>
                                                         </div>
 
-                                                    </form>
-                                                    @endauth
+                                                    
+                                                     
 
                                                 </div>
 

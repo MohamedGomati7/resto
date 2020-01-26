@@ -5,28 +5,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
+     <link href= "{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap')}}" rel="stylesheet">
+
+
     <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap')}}" rel="stylesheet">
-    <link href="{{asset('https://fonts.googleapis.com/css?family=Tajawal&display=swap')}}" rel="stylesheet">
 
-    <link rel="{{asset('stylesheet" href="css/open-iconic-bootstrap.min.css')}}">
-    <link rel="{{asset('stylesheet" href="css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('css/open-iconic-bootstrap.min.css')}}">
+
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     
-    <link rel="{{asset('stylesheet" href="css/owl.carousel.min.css')}}">
-    <link rel="{{asset('" href="css/owl.theme.default.min.css')}}">
-    <link rel="{{asset('stylesheet" href="css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
 
-    <link rel="{{asset('stylesheet" href="css/aos.css')}}">
+    <link rel="stylesheet" href="{{asset('css/aos.css')}}">
 
-    <link rel="{{asset('stylesheet" href="css/ionicons.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/ionicons.min.css')}}">
 
-    <link rel="{{asset('stylesheet" href="css/bootstrap-datepicker.css')}}">
-    <link rel="{{asset('stylesheet" href="css/jquery.timepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('css/jquery.timepicker.css')}}">
 
     
-    <link rel="{{asset('stylesheet" href="css/flaticon.css')}}">
-    <link rel="{{asset('stylesheet" href="css/icomoon.css')}}">
-    <link rel="{{asset('stylesheet" href="css/style.css')}}">
-    <link rel="{{asset('stylesheet" href="css/sign.css')}}">
+    <link rel="stylesheet" href="{{asset('css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('css/icomoon.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('css/sign.css')}}">
 
 
     <style>
@@ -131,7 +134,7 @@ to {transform: scale(1)}
 	      <div class="collapse navbar-collapse" id="ftco-nav" >
 	        <ul class="navbar-nav ">
 	        	<li class="nav-item active"><a href="/" class="nav-link">الرئيسية</a></li>
-            <li class="nav-item"><a href="/menu" class="nav-link">القائمة</a></li>
+            <li class="nav-item"><a href="/meals" class="nav-link">القائمة</a></li>
             <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
             <li class="nav-item cta"><a href="/reservation" class="nav-link">حجز طاولة</a></li>
@@ -184,8 +187,9 @@ to {transform: scale(1)}
 
 
 
-    	
-    <footer class="ftco-footer ftco-bg-dark" dir="rtl">
+    {{-- footer --}}
+
+     <footer class="ftco-footer ftco-bg-dark" dir="rtl">
       <div class="container" dir="rtl">
         <div class="row" dir="rtl">
           <div class="col-md-12 col-lg-12" dir="rtl">
@@ -212,27 +216,43 @@ to {transform: scale(1)}
       </div>
     </footer>
   
-
+{{-- END footer --}}
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="{{asset('js/jquery.min.js')}}"></script>
+
   <script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"></script>
+
   <script src="{{asset('js/popper.min.js')}}"></script>
+
   <script src="{{asset('js/bootstrap.min.js')}}"></script>
+
   <script src="{{asset('js/jquery.easing.1.3.js')}}"></script>
+
   <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
+
   <script src="{{asset('js/jquery.stellar.min.js')}}"></script>
+
   <script src="{{asset('js/owl.carousel.min.js')}}"></script>
+
   <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+
   <script src="{{asset('js/aos.js')}}"></script>
+
   <script src="{{asset('js/jquery.animateNumber.min.js')}}"></script>
+
   <script src="{{asset('js/bootstrap-datepicker.js')}}"></script>
+
   <script src="{{asset('js/jquery.timepicker.min.js')}}"></script>
+
   <script src="{{asset('js/scrollax.min.js')}}"></script>
+
   <script src="{{asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false')}}"></script>
+
   <script src="{{asset('js/google-map.js')}}"></script>
+
   <script src="{{asset('js/main.js')}}"></script>
     
   </body>
