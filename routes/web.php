@@ -11,6 +11,7 @@ Route::get('/about','aboutController@index');
 // Contact Controller
 
 Route::get('/contact','contactController@index'); 
+Route::post('/contact/send','contactController@send')->name('sendMessage');
 
 // Menu Controller
 
@@ -23,18 +24,20 @@ Route::get('/reservation','reservationController@index');
 
 // Category Controller
 
-Route::get('/categories/create','categoryController@create'); 
-Route::POST('/categories','categoryController@store'); 
+Route::get('/categories/create','categoryController@create')->middleware('auth'); 
+Route::POST('/categories','categoryController@store')->middleware('auth'); 
 
 
 // Meal Controller
 Route::get('/meals','mealController@index'); 
 
-Route::get('/meals/create','mealController@create'); 
-Route::POST('/meals/store','mealController@store'); 
-Route::get('/meals/{id}/edit' ,'mealController@edit');
-Route::PATCH('/meals/{id}' ,'mealController@update');
-Route::delete('/meals/{id}'   ,'mealController@destroy');
+Route::get('/meals/create','mealController@create')->middleware('auth'); 
+Route::POST('/meals/store','mealController@store')->middleware('auth'); 
+Route::get('/meals/{id}/edit' ,'mealController@edit')->middleware('auth');
+Route::PATCH('/meals/{id}' ,'mealController@update')->middleware('auth');
+Route::delete('/meals/{id}'   ,'mealController@destroy')->middleware('auth');
+
+
 
 
 
@@ -44,3 +47,7 @@ Route::delete('/meals/{id}'   ,'mealController@destroy');
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

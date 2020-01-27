@@ -19,19 +19,22 @@
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
 						<h2 class="h4 mb-2 mb-md-5 font-weight-bold text-right">تواصل معنا </h2>
-						<form action="#">
-              <div class="form-group">
+					<form action="{{ route('sendMessage')}}" method="post" class="form-validation row" autocomplete="off">
+              						@csrf
+
+              {{-- <div class="form-group">
                 <input type="text" class="form-control text-right" placeholder="إسمك ">
+              </div> --}}
+              <div class="form-group">
+                <input type="text" class="form-control text-right" name="email" placeholder="بريدك الالكتروني">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control text-right" placeholder="بريدك الالكتروني">
+                <input type="text" class="form-control text-right " name="subject" placeholder="الموضوع ">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control text-right " placeholder="موضوعك ">
+                <textarea  id="" cols="30" rows="7" class="form-control text-right" name="message" placeholder="رسالتك"></textarea>
               </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control text-right" placeholder="رسالتك"></textarea>
-              </div>
+              <br> 
               <div class="form-group text-right">
                 <input type="submit" value=" أرسل " class="btn btn-primary py-3 px-5">
               </div>

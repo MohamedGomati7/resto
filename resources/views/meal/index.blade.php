@@ -33,9 +33,9 @@
                             aria-orientation="vertical">
 
                             @foreach ( $categories as $category )
-
-                            <a class="nav-link ftco-animate" id="v-pills-{{ $category->id }}-tab" data-toggle="pill" href="#v-pills-{{ $category->id }}" {{ $category->name }}
-                                role="tab" aria-controls="v-pills-{{ $category->id }}" aria-selected="true"><b>{{$category->name}}</b></a>
+                              
+                            <a  class="nav-link ftco-animate  @if ($loop->first) active @endif"  id="v-pills-{{ $category->id }}-tab" data-toggle="pill" href="#v-pills-{{ $category->id }}" {{ $category->name }}
+  role="tab" aria-controls="v-pills-{{ $category->id }} "aria-selected="true"   ><b>{{$category->name}}</b></a> 
 
                             @endforeach
 
@@ -43,7 +43,7 @@
                     </div>
 
 
-
+{{-- @if ($loop->first){ aria-selected="true"} @endif --}}
 
 
                     <div class="col-md-12 tab-wrap">
@@ -51,7 +51,7 @@
                         <div class="tab-content" id="v-pills-tabContent">
 
                             @foreach($categories as $category)
-                        <div class="tab-pane fade show" id="v-pills-{{ $category->id }}" role="tabpanel"
+                        <div class="tab-pane fade @if ($loop->first) active  show active @endif" id="v-pills-{{ $category->id }}" role="tabpanel"
                                 aria-labelledby="day-1-tab">
                                 <div class="row no-gutters d-flex align-items-stretch">
                                     @foreach ($category->meals as $meal )
@@ -73,25 +73,31 @@
                                                     <p>{{$meal->details}}
                                                     </p> <br>
                                                         
-                                                             
-                                                    <form class="float-right">
+                                                           
+                                                    <form >
                                                         <div class="input-group input-number-group">
-                                                            <div class="input-group-button">
-                                                                <span class="input-number-decrement">-</span>
-                                                            </div>
-                                                            <input class="input-number" type="number" name="quantity"
-                                                                value="0" min="1" max="12">
-                                                            <div class="input-group-button">
-                                                                <span class="input-number-increment">+</span>
-                                                            </div>
-                                                            <br><br>
-                                                            <div> <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info mr-3">Edit Meal</a></div>
-                                                            </form><form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
+                                                            @guest
+                                                              
+                                                            <input class="input-number text-center m-0 p-0" type="number" name="quantity"
+                                                                value="0" min="1" max="12" >
+                                                           @endguest
+                                                            <br>
+                                                            </form>
+                                                            @auth
+                                                            <form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
+
+                                                             <a href="{{ url("/meals/$meal->id/edit") }}" class="btn btn-info mr-3 ml-3">Edit</a>
+                                                            
+                                                            </form>@endauth
+                                                            
+                                                            @auth
+                                                            <form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
                                                                 @csrf
                                                                 @method('DELETE')
                                 
                                                                 <input type="submit" value="Delete" class="btn btn-danger" >
                                                             </form>
+                                                            @endauth
                                                         </div>
 
                                                     
@@ -111,21 +117,25 @@
                         </div>
                     </div>
 
-    </section>
+            
+            
+            
+               @guest
+
 
     <!-- button Done    -->
     
-@auth
- 
+
 
     <div class="buttondone">
 
-        <a  class="btn btn-success btn-lg" href="/checkout">موافق</a>
+        <a  class="btn btn-success btn-lg" style="margin:30px 10px" href="/checkout">موافق</a>
 
     </div>
 
-@endauth
+
     <!--  End button done   -->
+    @endguest
 
-
+    </section>
     @endsection
