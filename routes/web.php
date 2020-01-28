@@ -39,11 +39,6 @@ Route::delete('/meals/{id}'   ,'mealController@destroy')->middleware('auth');
 
 
 
-
-
-
-
-
 // Route::get('/', function () {
 //     return view('welcome');
 // });
