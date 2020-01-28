@@ -20,6 +20,8 @@ Route::post('/contact/send','contactController@send')->name('sendMessage');
 // Reservation Controller
 
 Route::get('/reservation','reservationController@index'); 
+Route::POST('/reservation/store','reservationController@store')->name('reservation.store');
+
 
 
 // Category Controller

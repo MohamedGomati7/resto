@@ -23,36 +23,40 @@
 		          	<span class="subheading"> إحجز طاولة</span> <br>
 		            <h2 class="mb-4">قم بحجزك</h2>
 		          </div>
-	            <form action="#">
+	            <form  action="{{ route('reservation.store') }}" method="post" enctype="multipart/form-data">
+			  @csrf
 	              <div class="row">
 	                <div class="col-md-6">
 	                  <div class="form-group text-right">
 	                    <label for="">الإيميل</label>
-	                    <input type="text" class="form-control text-right" placeholder="إيميلك">
+	                    <input type="text" class="form-control text-right" placeholder="إيميلك" name="email">
+						{{-- @error('email')
+{{$message}}
+						@enderror --}}
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group text-right">
 	                    <label for="">الإسم</label>
-	                    <input type="text" class="form-control text-right" placeholder="إسمك">
+	                    <input type="text" class="form-control text-right" placeholder="إسمك" name="name">
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group text-right">
 	                    <label for="">رقم الهاتف </label>
-	                    <input type="text" class="form-control text-right" placeholder="رقمك">
+	                    <input type="text" class="form-control text-right" placeholder="رقمك" name="phoneNum">
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group text-right">
 	                    <label for="">التاريخ </label>
-	                    <input type="text" class="form-control text-right" id="book_date" placeholder="التاريخ">
+	                    <input type="date" class="form-control text-right"  placeholder="التاريخ" name="date">
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
 	                  <div class="form-group text-right">
 	                    <label for="">الوقت</label>
-	                    <input type="text" class="form-control text-right" id="book_time" placeholder="الوقت">
+	                    <input type="text" class="form-control text-right" id="book_time" placeholder="الوقت" name="time">
 	                  </div>
 	                </div>
 	                <div class="col-md-6">
@@ -60,12 +64,12 @@
 	                    <label for="">عدد الاشخاص</label>
 	                    <div class="select-wrap one-third">
 	                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                      <select name="" id="" class="form-control text-right">
-	                        <option value="">عدد الاشخاص</option>
-	                        <option value="">1</option>
-	                        <option value="">2</option>
-	                        <option value="">3</option>
-	                        <option value="">4+</option>
+	                      <select name="personalNum" id="" class="form-control text-right">
+	                        <option  >عدد الاشخاص</option>
+	                        <option value="1">1</option>
+	                        <option  value="2">2</option>
+	                        <option value="3">3</option>
+	                        <option  value="4">4</option>
 	                      </select>
 	                    </div>
 	                  </div>
