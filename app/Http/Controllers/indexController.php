@@ -14,9 +14,9 @@ class indexController extends Controller
     // }
     public function index(){
         // $role = Role::create(['name' => 'writer']);
-        // Role::create(['name' => 'writer']);
 
-
+        // Role::create(['name' => 'writer2']);
+        // auth()->user()->givePermissionTo('edit_post');
         return view('index');
     }
 }
