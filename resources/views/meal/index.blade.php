@@ -74,15 +74,17 @@
                                                     </p> <br>
                                                         
                                                            
-                                                    <form >
-                                                        <div class="input-group input-number-group">
                                                             @guest
-                                                              
-                                                            <input class="input-number text-center m-0 p-0" type="number" name="quantity"
-                                                                value="0" min="1" max="12" >
+                                                            <form action="{{ url('cart-items') }}" method="post">
+                                                            @method('POST')
+                                                                <div class="input-group input-number-group">
+                                                                <input type="hidden" name="meal_id" value="{{$meal->id}}">
+                                                                <input class="input-number text-center m-0 p-0" type="number" name="quantity" placeholder="0"
+                                                               min="1" max="12" >
+                                                       <input type="submit" value="موافق"  class="btn btn-success btn-lg ml-5" >
+                                                            </form>
                                                            @endguest
                                                             <br>
-                                                            </form>
                                                             @auth
                                                             <form action="{{ url("/meals/$meal->id") }}" method="post" style="display: inline;">
 
@@ -119,23 +121,7 @@
 
             
             
-            
-               @guest
-
-
-    <!-- button Done    -->
-    
-
-
-    <div class="buttondone">
-
-        <a  class="btn btn-success btn-lg" style="margin:30px 10px" href="/checkout">موافق</a>
-
-    </div>
-
-
-    <!--  End button done   -->
-    @endguest
+          
 
     </section>
     @endsection
