@@ -137,16 +137,19 @@ to {transform: scale(1)}
             <li class="nav-item"><a href="/meals" class="nav-link">القائمة</a></li>
             <li class="nav-item "><a href="/about" class="nav-link">معلومات عنّا</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">تواصل معنا</a></li>
+             @role('customer')
             <li class="nav-item cta"><a href="/reservation" class="nav-link">حجز طاولة</a></li>
+@endrole
 
-
-             @auth
+             @role('admin')
               
  	          <li class="nav-item cta"><a href="\categories\create" class="nav-link" style="margin:0px 10px";> اضافة صنف</a></li>
 	          <li class="nav-item cta " ><a href="\meals\create" class="nav-link" style="margin:0px 5px";> اضافة وجبة </a></li>
          
          
-          @endauth
+          @endrole
+
+          
           </ul>
           <ul class="navbar-nav mr-auto">
             {{-- <li id="signup"   class=" nav-item "  onclick="document.getElementById('modal-wrapper').style.display='block'" ><a  class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3 nav-link" >Sign Up</a></li>
@@ -227,7 +230,7 @@ to {transform: scale(1)}
 
     {{-- footer --}}
 
-     <footer class="ftco-footer ftco-bg-dark" dir="rtl">
+     <footer class="ftco-footer ftco-bg-dark  " dir="rtl">
       <div class="container" dir="rtl">
         <div class="row" dir="rtl">
           <div class="col-md-12 col-lg-12" dir="rtl">

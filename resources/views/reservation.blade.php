@@ -2,21 +2,21 @@
 
  @section('content')
     
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div>
-      <div class="container">
+    <section class="align-self-center hero-wrap hero-wrap-2 " style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+      <div class="overlay "></div>
+      <div class="container ">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate text-center mb-4">
             <h1 class="mb-2 bread">إحجز طاولة</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">الرئيسية <i class="ion-ios-arrow-forward"></i></a></span> <span>حجوزات <i class="ion-ios-arrow-forward"></i></span></p>
+            {{-- <p class="breadcrumbs"><span class="mr-2"><a href="index.html">الرئيسية <i class="ion-ios-arrow-forward"></i></a></span> <span>حجوزات <i class="ion-ios-arrow-forward"></i></span></p> --}}
           </div>
         </div>
       </div>
     </section>
-		
-		<section class="ftco-section ftco-no-pt ftco-no-pb">
-			<div class="container-fluid px-0">
-				<div class="row d-flex no-gutters">
+	
+		<section class="ftco-section ftco-no-pt ftco-no-pb align-items-end justify-content-center">
+			<div class="container-fluid px-0 align-items-end justify-content-center">
+				<div class="row d-flex no-gutters align-items-end justify-content-center">
           <div class="col-md-6 order-md-last ftco-animate makereservation p-4 p-md-5 pt-5">
           	<div class="py-md-5">
 	          	<div class="heading-section ftco-animate mb-5">
@@ -83,9 +83,9 @@
 	            </form>
 	          </div>
           </div>
-          <div class="col-md-6 d-flex align-items-stretch pb-5 pb-md-0">
+          {{-- <div class="col-md-6 d-flex align-items-stretch pb-5 pb-md-0">
 						<div id="map"></div>
-					</div>
+					</div> --}}
         </div>
 			</div>
 		</section>

@@ -1,6 +1,6 @@
 @extends('layout.footer')
 
-@section('content')
+@section('content')\
 
 
 {{-- <form action="{{url('/categories')}}" method="POST"> --}}
@@ -38,4 +38,5 @@
 </div>
 </div>
 </div>
+<div><br/><br/><br/><br/></div>
 @endsection
